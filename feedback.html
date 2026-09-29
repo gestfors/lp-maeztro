@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compartilhe sua experiência com o MAEZTRO Gestão." />
+  <title>Formulário de avaliação | MAEZTRO Gestão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100..900&display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="feedback-page">
+  <main class="feedback-shell">
+    <form id="feedback-form" class="feedback-form" action="https://formspree.io/f/xbdevbne" method="POST">
+      <input type="hidden" name="_subject" value="Avaliação do MAEZTRO Gestão" />
+      <div class="feedback-heading">
+        <img class="feedback-brand" src="assets/logo_horizontal.png" alt="MAEZTRO Gestão" />
+        <h1>Formulário de avaliação</h1>
+      </div>
+
+      <fieldset class="feedback-question">
+        <legend><span class="feedback-number">01</span>De forma geral, como você avalia sua experiência utilizando o MAEZTRO Gestão durante o período de teste?</legend>
+        <div class="feedback-options rating-options">
+          <label class="feedback-choice">
+            <input type="radio" name="experience" value="5" required />
+            <span class="feedback-stars" aria-hidden="true">★★★★★</span>
+            <span>Excelente</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="experience" value="4" />
+            <span class="feedback-stars" aria-hidden="true">★★★★</span>
+            <span>Muito boa</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="experience" value="3" />
+            <span class="feedback-stars" aria-hidden="true">★★★</span>
+            <span>Boa</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="experience" value="2" />
+            <span class="feedback-stars" aria-hidden="true">★★</span>
+            <span>Ruim</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="experience" value="1" />
+            <span class="feedback-stars" aria-hidden="true">★</span>
+            <span>Muito ruim</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="feedback-question">
+        <legend><span class="feedback-number">02</span>O que você mais gostou ou considerou mais útil no MAEZTRO Gestão?</legend>
+        <label class="feedback-field-label" for="most-useful">Resposta aberta.</label>
+        <textarea id="most-useful" name="mostUseful" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="feedback-question">
+        <legend><span class="feedback-number">03</span>Durante o uso, houve alguma funcionalidade, recurso ou característica que você considerou um diferencial do MAEZTRO?</legend>
+        <div class="feedback-options binary-options">
+          <label class="feedback-choice">
+            <input type="radio" name="hasDifferential" value="Sim" required />
+            <span>Sim</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="hasDifferential" value="Não" />
+            <span>Não</span>
+          </label>
+        </div>
+        <div id="differential-followup" class="feedback-followup" hidden>
+          <label class="feedback-field-label" for="differential">Se sim, conte qual foi e por quê.</label>
+          <textarea id="differential" name="differential" rows="3" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="feedback-question">
+        <legend><span class="feedback-number">04</span>O que você acha que poderia ser melhorado no MAEZTRO Gestão?</legend>
+        <label class="feedback-field-label" for="improvements">Resposta aberta.</label>
+        <textarea id="improvements" name="improvements" rows="4" aria-describedby="improvements-hint"></textarea>
+        <p class="feedback-hint" id="improvements-hint">Pode ser uma funcionalidade, facilidade de uso, informação, visual, organização ou qualquer outro aspecto.</p>
+      </fieldset>
+
+      <fieldset class="feedback-question">
+        <legend><span class="feedback-number">05</span>Após o período de teste, você assinou o MAEZTRO Gestão?</legend>
+        <div class="feedback-options status-options">
+          <label class="feedback-choice">
+            <input type="radio" name="subscription" value="Sim, assinei." required />
+            <span>Sim, assinei.</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="subscription" value="Ainda não, mas pretendo assinar." />
+            <span>Ainda não, mas pretendo assinar.</span>
+          </label>
+          <label class="feedback-choice">
+            <input type="radio" name="subscription" value="Não assinei." />
+            <span>Não assinei.</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset id="subscription-followup" class="feedback-question" hidden>
+        <legend><span class="feedback-number">06</span>Se você ainda não assinou, o que faltou para que você tomasse essa decisão?</legend>
+        <label class="feedback-field-label" for="subscription-reason">Resposta aberta.</label>
+        <textarea id="subscription-reason" name="subscriptionReason" rows="4" aria-describedby="subscription-hint"></textarea>
+        <p class="feedback-hint" id="subscription-hint">Conte com sinceridade o que poderia fazer você considerar a assinatura: alguma funcionalidade, melhoria, preço, necessidade, facilidade de uso ou outro motivo.</p>
+      </fieldset>
+
+      <div class="feedback-submit-row">
+        <button class="button button-primary feedback-submit" type="submit">Enviar avaliação</button>
+        <p id="feedback-status" class="feedback-submit-note" role="status" aria-live="polite">Após o envio, você será redirecionado à página inicial.</p>
+      </div>
+    </form>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

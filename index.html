@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@100..900&display=block"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,33 +20,50 @@
       <a class="brand" href="#inicio" aria-label="MAEZTRO Gestão">
         <img src="assets/logo_horizontal.png" alt="MAEZTRO" />
       </a>
-      <a class="header-cta" href="#planos">Conheça nossos produtos</a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i
-          data-lucide="menu"></i></button>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#beneficios">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <a class="header-cta" href="#planos">Conheça nossos planos</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobile-menu"><i data-lucide="menu"></i></button>
     </div>
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Navegação principal móvel">
+      <a href="#beneficios">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="mobile-cta" href="#planos">Conheça nossos planos</a>
+    </nav>
   </header>
 
   <main>
     <section id="inicio" class="hero section-light">
-      <div class="hero-glow"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow-pill"><span></span> LANÇAMENTO OFICIAL <b>•</b> SOFTWARE PARA PROFESSORES DE MÚSICA</div>
-          <h1>Suas aulas em harmonia, sua rotina financeira <em>sob controle.</em></h1>
-          <p class="lead">Chega de anotações soltas no WhatsApp e cobranças constrangedoras. Organize alunos, horários e
-            mensalidades em um só lugar.</p>
-          <div class="actions"><a class="button button-primary"
-              href="https://app-maeztro.gestfors.com.br/teste-gratis" target="_blank" rel="noreferrer">Teste gratuito
-              por 14 dias <i data-lucide="arrow-right"></i></a><a class="button button-secondary"
-              href="#beneficios">Conheça o MAEZTRO</a></div>
-          <div class="trust-list"><span><i data-lucide="check"></i> Sem cartão de crédito</span><span><i
-                data-lucide="check"></i> Configuração em 5 minutos</span><span><i data-lucide="check"></i> Cancele
-              quando quiser</span></div>
+      <div class="hero-content">
+        <div class="eyebrow-pill"><span></span> Lançamento oficial <b>•</b> Software para professores de música</div>
+        <h1>Suas aulas em harmonia,<br />sua rotina financeira <em>sob controle.</em></h1>
+        <p class="lead">Chega de anotações soltas no WhatsApp e cobranças constrangedoras. Organize alunos, horários e mensalidades em um só lugar.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://app-maeztro.gestfors.com.br/teste-gratis" target="_blank" rel="noreferrer">Teste gratuito por 14 dias <i data-lucide="arrow-right"></i></a>
+          <a class="button button-secondary" href="#beneficios">Conheça o MAEZTRO</a>
         </div>
-        <div class="hero-image">
-          <div class="image-halo"></div>
-          <div class="image-frame"><img src="assets/App Frame.png" alt="Dashboard do MAEZTRO Gestão" /></div>
+        <div class="trust-list">
+          <span><i data-lucide="check"></i> Sem cartão de crédito</span>
+          <span><i data-lucide="check"></i> Configuração em 5 minutos</span>
+          <span><i data-lucide="check"></i> Cancele quando quiser</span>
         </div>
+      </div>
+      <div class="hero-band" aria-hidden="true">
+        <video class="band-video" autoplay muted loop playsinline preload="metadata"
+          poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_125039_45a71f04-36dd-4620-99d8-7526316d439e.png">
+          <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_125119_4963ddd4-c287-4044-b014-b68943cdd8bd.mp4" type="video/mp4" />
+        </video>
+        <div class="band-tint"></div>
+      </div>
+      <div class="hero-image">
+        <div class="image-frame"><img src="assets/App Frame.png" alt="Dashboard do MAEZTRO Gestão" /></div>
       </div>
     </section>
 
@@ -54,14 +71,13 @@
       <div class="container centered">
         <div class="section-label">DESAFIOS REAIS</div>
         <h2>Dar aula é a sua paixão. Mas a desorganização consome o seu tempo.</h2>
-        <p class="section-intro">Professores de música perdem horas toda semana tentando conciliar anotações no caderno,
-          mensagens perdidas e cobranças desconfortáveis.</p>
+        <p class="section-intro">Professores de música perdem horas toda semana tentando conciliar anotações no caderno, mensagens perdidas e cobranças desconfortáveis.</p>
         <div class="card-grid three-cols">
           <article class="info-card">
             <div class="icon-box"><i data-lucide="message-circle"></i></div>
             <h3>Mensagens perdidas no WhatsApp</h3>
-            <p>O aluno desmarca em cima da hora e você não lembra qual horário estava livre.</p><strong>Falta de agenda
-              centralizada</strong>
+            <p>O aluno desmarca em cima da hora e você não lembra qual horário estava livre.</p>
+            <strong>Falta de agenda centralizada</strong>
           </article>
           <article class="info-card">
             <div class="icon-box"><i data-lucide="credit-card"></i></div>
@@ -72,8 +88,8 @@
           <article class="info-card">
             <div class="icon-box"><i data-lucide="clipboard-list"></i></div>
             <h3>Planilhas manuais que ninguém preenche</h3>
-            <p>Atualizar planilhas pelo celular entre uma aula e outra é uma tarefa que nunca termina.</p><strong>Zero
-              previsibilidade financeira</strong>
+            <p>Atualizar planilhas pelo celular entre uma aula e outra é uma tarefa que nunca termina.</p>
+            <strong>Zero previsibilidade financeira</strong>
           </article>
         </div>
       </div>
@@ -245,29 +261,25 @@
 
   <!-- Modal Simples de Política de Privacidade / Termos para cumprir os links sem dead links -->
   <div id="legal-modal" class="legal-modal" aria-hidden="true">
-    <div
-      class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-card max-h-[80vh] overflow-y-auto border border-slate-200">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-        <h4 id="modal-title" class="text-lg font-bold text-slate-900">Termos e Condições</h4>
-        <button id="close-modal" type="button"
-          class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-100"
-          aria-label="Fechar janela">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <div class="modal-header">
+        <h2 id="modal-title">Termos e Condições</h2>
+        <button id="close-modal" class="modal-close" type="button" aria-label="Fechar janela">
           <i data-lucide="x"></i>
         </button>
       </div>
-      <div id="modal-body" class="py-4 text-sm text-slate-600 leading-relaxed space-y-3">
+      <div id="modal-body" class="modal-body">
         <!-- Conteúdo dinâmico preenchido via script -->
       </div>
-      <div class="pt-4 border-t border-slate-100 text-right">
-        <button id="modal-ok-btn" type="button"
-          class="px-5 py-2 bg-brand text-white rounded-xl text-sm font-semibold hover:bg-brand-dark">
+      <div class="modal-footer">
+        <button id="modal-ok-btn" class="modal-ok" type="button">
           Fechar
         </button>
       </div>
     </div>
   </div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
